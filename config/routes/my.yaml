@@ -1,0 +1,3 @@
+hi:
+    path: /hi
+    controller: App\Controller\DataController::index
