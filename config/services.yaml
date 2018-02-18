@@ -28,3 +28,10 @@ services:
 
     App\Services\MarkDownInterface:
         class: App\Services\MarkdownHelper
+
+    App\Menu\Builder: ~
+
+    Knp\Menu\MenuItem:
+        factory: ['App\Menu\Builder', 'mainMenu']
+        tags:
+            - { name: knp_menu.menu, alias: main_menu }
